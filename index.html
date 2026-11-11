@@ -412,7 +412,8 @@
         .sheet, .backdrop { transition: none; }
       }
     </style>
-  </head>
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
   <body>
     <header class="hero">
       <div class="hero-inner">
@@ -1045,5 +1046,6 @@
       /* ---------- Mulai ---------- */
       loadEvents();
     </script>
-  </body>
+  <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});}</script>
+</body>
 </html>
